@@ -1,0 +1,68 @@
+.Header {
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    transition: 0.8s cubic-bezier(0.02, 0.8, 0.2, 1);
+    color: black;
+}
+.HeaderGroup {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    align-items: center;
+    justify-items: center;
+}
+.HeroGroup {
+    margin: 0 auto;
+    max-width: 500px;
+    padding: 150px 50px;
+    text-align: center;
+}
+.HeaderGroup h1 {
+    margin: 1.5vh 0;
+    color: inherit;
+    font-size: 2vw;
+    color: #444;
+}
+.Header a, .link {
+    color: inherit;
+    font-size: 2vw;
+    font-weight: 700;
+    filter: none;
+}
+.Flare {
+    grid-column-start: 8;
+    width: 125px;
+    height: 100px;
+}
+.Portfolio {
+    grid-column-start: 7;
+}
+.Contact {
+    grid-column-start: 8;
+
+}
+.HeaderScrolled {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(8, 9, 11, 0.8);
+    color: white !important;
+
+}
+@media (max-width: 640px) {
+    .Header {
+        padding: 15px 0;
+    }
+    .Header a:nth-child(4){ 
+        display: none;
+    }
+    .Photos {
+        grid-column-start: 5 !important;
+    }
+    .HeaderGroup {
+        grid-gap: 1px;
+        grid-template-columns: repeat(6, auto) !important;
+    }
+}
+
+
