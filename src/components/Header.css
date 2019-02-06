@@ -11,7 +11,9 @@
 .HeaderGroup {
     margin: 0 auto;
     display: grid;
+    display: -ms-grid;
     grid-template-columns: repeat(8, auto);
+    -ms-grid-template-columns: repeat(8, auto);
     align-items: center;
     justify-items: center;
 }
@@ -34,14 +36,17 @@
 }
 .Flare {
     grid-column-start: 8;
+    -ms-grid-column-start: 8;
     width: 125px;
     height: 100px;
 }
 .Portfolio {
     grid-column-start: 7;
+    -ms-grid-column-start: 7;
 }
 .Contact {
     grid-column-start: 8;
+    -ms-grid-column-start: 8;
 
 }
 .HeaderScrolled {
@@ -60,10 +65,12 @@
     }
     .Photos {
         grid-column-start: 5 !important;
+        -ms-grid-column-start: 5 !important;
     }
     .HeaderGroup {
         grid-gap: 1px;
         grid-template-columns: repeat(6, auto) !important;
+        -ms-grid-template-columns: repeat(6, auto) !important;
     }
 }
 
