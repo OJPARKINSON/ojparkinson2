@@ -1,9 +1,12 @@
+* {
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+}
 .Header {
     position: fixed;
     width: 100%;
     z-index: 100;
     transition: 0.8s cubic-bezier(0.02, 0.8, 0.2, 1);
-    color: black;
+    color: #444;
 }
 .HeaderGroup {
     margin: 0 auto;
@@ -22,7 +25,6 @@
     margin: 1.5vh 0;
     color: inherit;
     font-size: 2vw;
-    color: #444;
 }
 .Header a, .link {
     color: inherit;
@@ -64,5 +66,4 @@
         grid-template-columns: repeat(6, auto) !important;
     }
 }
-
 

@@ -1,13 +1,13 @@
-import React, { Children } from 'react'
+import React from 'react'
 import '../components/layout.css'
 
 const Card = props => (
     <div className="Card">
-        <div className="firstCard" width={props.widthone}>
-            {props.contentone}
+        <div className="firstCard" style={props.widthone}>
+            <h2>{props.contentone}</h2>
         </div>
-        <div className="secondCard" width={props.widthtwo}>
-            {props.contenttwo}
+        <div className="secondCard" style={props.widthtwo}>
+            <img alt="website preview" src={props.contenttwo} />
         </div>
     </div>
 )

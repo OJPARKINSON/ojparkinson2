@@ -1,6 +1,6 @@
 body {
   box-sizing: border-box;
-  font-family: sans-serif;
+  font-family: Futura,Trebuchet MS,Arial,sans-serif;
   margin: 0;
   font-size: 1.5rem;
   -webkit-font-smoothing: antialiased;
@@ -10,8 +10,8 @@ img {
   -webkit-user-drag: none;
 }
 a {
-  color: white;
-  font-size: 2vw;
+  color: #444;
+
   font-weight: 700;
   text-decoration: none;
   filter: none;
@@ -19,6 +19,7 @@ a {
 .Hero {
   height: 80vh;
   margin: 0;
+  color: #444;
   /*
   background-size: cover;
   background-position: center;
@@ -32,7 +33,7 @@ h2 {
   width: 100% !important;
   justify-self: center;
   text-align: center;
-  font-size: 3vw;
+  color: inherit;
 }
 .firstPage h1{
   animation: HeroAnimation 3s forwards cubic-bezier(0.02, 0.8, 0.2, 1);
@@ -64,22 +65,34 @@ h2 {
   margin: 5vh auto 0 auto;
   height: 20vh;
   width: 85%;
+  background-color: #444;
+  color: white;
 }
 .firstCard {
   float: left;
-  width: 50%;
   text-align: center;
   height: 100px;
   margin: 0 ;
 }
 .secondCard {
   float: left;
-  width: 50%;
   text-align: center;
   height: 100px;
   margin: 0 ;
 }
 .scrollText {
-  padding-top: 25vh;
+  padding-top: 30vh;
+  font-size: 2.5vw;
+}
+footer {
+  font-family: futura;
+  font-size: 2vw;
+  color: #444;
+  padding: 1vw;
+}
+h3 {
+  margin: 0;
+  width: 20%;
+  font-size: 1vw;
 }
 

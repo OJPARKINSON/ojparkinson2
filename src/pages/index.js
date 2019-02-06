@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header";
@@ -16,8 +15,7 @@ const IndexPage = () => (
         <h2>Welcome, <br /> Scroll to <br/> explore.</h2>
       </div>
     </div>
-    <Card widthone="20%;" widthtwo="80%;" contentone="hello" contenttwo="hello" />
-    <Link to="/page-2/">Go to page 2</Link>
+    <Card widthone={{width:'25%'}} widthtwo={{width:'75%'}} contentone="Harrison Tate" contenttwo="hello" />
   </Layout>
 )
 
