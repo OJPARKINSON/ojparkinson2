@@ -52,7 +52,7 @@
 .HeaderScrolled {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-    background: rgba(8, 9, 11, 0.8);
+    background: rgba(8,9,11,.8);
     color: white !important;
 
 }
