@@ -14,9 +14,12 @@ const IndexPage = () => (
       </div>
     </div>
     <div className="container">
-      <div className="firstBox">
+      <div className="gitBox">
         <h4>50</h4>
         <h5>Commits in the last year</h5>
+      </div>
+      <div className="Portfolio">
+        m
       </div>
     </div>
   </Layout>
