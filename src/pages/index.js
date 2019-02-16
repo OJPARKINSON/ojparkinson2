@@ -2,7 +2,6 @@ import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
-import Typist from 'react-typist'
 
 const IndexPage = () => (
   <Layout>
@@ -10,17 +9,11 @@ const IndexPage = () => (
     <Header />
     <div className="Hero">
       <div className="scrollText">
-        <Typist><h2>Welcome, <br /> Scroll to <br/> explore.</h2></Typist>
+        <h2>Welcome, <br /> Scroll to <br/> explore.</h2>
       </div>
     </div>
     <div className="container">
-      <div className="gitBox">
-        <h4>50</h4>
-        <h5>Commits in the last year</h5>
-      </div>
-      <div className="Portfolio">
-        m
-      </div>
+
     </div>
   </Layout>
 )
