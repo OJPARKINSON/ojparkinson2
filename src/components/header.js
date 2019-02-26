@@ -25,9 +25,6 @@ class Header extends React.Component {
     render() {
     return (
       <div className={this.state.hasScrolled ? 'Header HeaderScrolled' : 'Header'}> 
-        <div className="headeTitle">
-          <h1>Oliver Parkinson</h1>
-        </div>
         <div className="menu-icon hover-target">
           <span className="menu-icon__line menu-icon__line-left"></span>
           <span className="menu-icon__line"></span>

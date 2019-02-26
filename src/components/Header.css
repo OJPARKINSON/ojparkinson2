@@ -1,12 +1,10 @@
 .Header {
     background-color: black;
     width: 100vw;
-    height: 10vh;
     display: grid;
     grid-template-columns: repeat(8,auto);
 }
 .headeTitle {
-    width: 23vw;
     font-size: 3vw;
     align-self: start;
     color: white;
@@ -14,8 +12,8 @@
     align-self: center;
 }
 h1 {
-    margin: 0 auto;
-    font-size: 3vw;
+    margin: 1.5vw auto;
+    font-size: 2.5vw;
     color: white;
 }
 .menu-icon {
@@ -27,6 +25,7 @@ h1 {
     grid-column-start: 8;
     align-self: center;
     justify-self: center;
+    margin-top: 0.5vh;
 }
 .menu-icon__line {
     height: 0.3vh;
@@ -57,4 +56,7 @@ h1 {
 }
 .menu-icon:hover .menu-icon__line-left, .menu-icon:hover .menu-icon__line-right {
     width: 2vw;
+}
+.HeaderScrolled {
+
 }
