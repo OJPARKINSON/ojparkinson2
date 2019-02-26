@@ -5,12 +5,11 @@ import Header from "../components/header"
 
 const IndexPage = () => (
   <Layout>
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" />
     <SEO title="Home" keywords={[`Oliver`, `Parkinson`, `Oliver Parkinson`, 'Oliver Parkinson software development', 'Oliver Parkinson Portfolio']} />
     <Header />
     <div className="Hero">
-      <div className="scrollText">
-        <h2>Welcome, <br /> Scroll to <br/> explore.</h2>
-      </div>
+ 
     </div>
     <div className="container">
 
