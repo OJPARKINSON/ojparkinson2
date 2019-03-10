@@ -1,7 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Header from "../components/header"
+import Header from "../components/header";
 
 const IndexPage = () => (
   <Layout>
@@ -9,7 +9,7 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`Oliver`, `Parkinson`, `Oliver Parkinson`, 'Oliver Parkinson software development', 'Oliver Parkinson Portfolio']} />
     <Header />
     <div className="Hero">
- 
+
     </div>
     <div className="container">
 

@@ -10,7 +10,6 @@ img {
   -webkit-user-drag: none;
 }
 a {
-  color: #444;
   font-weight: 700;
   text-decoration: none;
   filter: none;
@@ -18,14 +17,6 @@ a {
 .Hero {
   height: 80vh;
   margin: 0;
-  color: #444;
-  /*
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  padding-top: 80vh;
-  background: url('../images/ilya-pavlov-87438-unsplash.jpg') right top / 100% no-repeat fixed;
-  transform: translateZ(-1px) translateY(-20px) ; */
 }
 h2 {
   margin: 0;
@@ -34,24 +25,8 @@ h2 {
   text-align: center;
   color: inherit;
 }
-.firstPage h1{
-  animation: HeroAnimation 3s forwards cubic-bezier(0.02, 0.8, 0.2, 1);
-  animation-delay: 0.15s;
-  opacity: 0;
-}
-.Hero p {
-  color: rgba(225,225,225, 0.8);
-  font-size: 30px;
-  line-height: 1.5;
-  animation: HeroAnimation 3s forwards cubic-bezier(0.02, 0.8, 0.2, 1);
-}
+
 @media (max-width: 640px) {
-  .HeroGroup {
-    padding: 100px 20px;
-  }
-  .Hero p {
-    font-size: 24px;
-  }
   h1 {
     font-size: 5vw !important;
   }
@@ -59,13 +34,6 @@ h2 {
     margin: 0 10px;
     font-size: 4.5vw !important;
   }
-}
-
-footer {
-
-  font-size: 2vw;
-  color: #444;
-  padding: 1vw;
 }
 h3 {
   margin: 0;
@@ -77,23 +45,6 @@ h3 {
   width: 100%;
   margin: 0 auto;
 }
-.gitBox {
-  margin: 0 auto;
-  width: 90vw;
-}
-h4 {
-  color: white; 
-  text-align: center;
-  font-size: 3vw;
-  margin: 2vh 0;
-  text-decoration: underline;
-}
-h5 {
-  margin: 2vh 0;
-  color: white; 
-  text-align: center;
-  font-size: 2.5vw;
 
-}
 
 
