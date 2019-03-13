@@ -24,11 +24,11 @@ const Layout = ({ children }) => (
         >
           <main>{children}</main>
           <footer>
-          <h3>
+          <h4>
             © {new Date().getFullYear()}, Built by
             {` `}
             <a href="http://oliverparkinson.co.uk">Oliver Parkinson</a>
-          </h3>
+          </h4>
           </footer>
         </div>
       </>

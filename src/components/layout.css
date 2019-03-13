@@ -14,10 +14,6 @@ a {
   text-decoration: none;
   filter: none;
 }
-.Hero {
-  height: 80vh;
-  margin: 0;
-}
 h2 {
   margin: 0;
   width: 100% !important;
@@ -31,7 +27,6 @@ h2 {
     font-size: 5vw !important;
   }
   a{
-    margin: 0 10px;
     font-size: 4.5vw !important;
   }
 }
@@ -40,11 +35,77 @@ h3 {
   width: 20%;
   font-size: 1vw;
 }
+.side {
+  display: inline-block;
+  position: relative;
+  width: 5vw;
+  font-size: 1.5vw;
+  text-align: center;
+  -moz-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+#side_about {
+  top: 7vw;
+  left: 8vw;
+}
+#side_portfolio {
+  top: 11vh;
+  left: 8vw;
+}
+h3 {
+  text-transform: uppercase;
+  color: #979797;
+  outline: 0;
+  font-size: .8vw;
+  -webkit-tap-highlight-color: transparent;
+}
 .container {
-  background-color: #444;
   width: 100%;
   margin: 0 auto;
 }
-
-
+.player-wrapper {
+  width: 66%;
+  height: auto;
+  margin: 0 auto 8vh auto;
+}
+.portfolio {
+  width: 100%;
+  height: 70vh;
+}
+.react-player {
+  height: 60vh !important;
+}
+.separator {
+  height: 0.2vh;
+  width: 100%;
+  margin: 5vh 0 ;
+  background-color: #EDEDED;
+}
+.about {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 66%;
+  margin: 0 auto;
+  grid-gap: 3vw;
+}
+.boxContainer {
+  text-align: center
+}
+.logoContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 auto;
+  max-width: 30vw;
+}
+.logoContainer img {
+  margin: 0 auto;
+  height: 8vh;
+  width: 8vh;
+}
 
