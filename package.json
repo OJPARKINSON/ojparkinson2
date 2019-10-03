@@ -28,7 +28,8 @@
     "react-play": "^1.0.0",
     "react-player": "^1.9.3",
     "react-typist": "^2.0.5",
-    "react-vertical-timeline-component": "^2.3.1"
+    "react-vertical-timeline-component": "^2.3.1",
+    "snyk": "^1.230.5"
   },
   "keywords": [
     "gatsby"
@@ -40,7 +41,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
-    "deploy": "gatsby build --prefix-paths && gh-pages -d public"
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -48,5 +51,6 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "snyk": true
 }
