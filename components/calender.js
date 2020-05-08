@@ -29,23 +29,27 @@ const calendarQuery = gql`
     }
 `;
 
+
+
 const Calendar = () => {
     const { loading, error, data } = useQuery(calendarQuery);
-    console.log({ loading, error, data })
+
     if (loading) { 
-        return 'loading bro'
+        return <h2>Loading bro</h2>
     } else if (error) { 
-        return 'error loading the github calander'
+        return <h2>Error loading the github calander</h2>
     } else {
+        const { startDate } = data?.viewer?.contributionsCollection?.contributionCalendar?.weeks[0]
+        const Days = data?.viewer?.contributionsCollection?.contributionCalendar?.weeks?.reduce((acc, current) => {
+            current.contributionDays.map(day => acc.push({ date: day.date, count: day.contributionCount}))
+            return acc;
+            }, []);
         return (
             <>
                 <CalendarHeatmap
-                    startDate={data.viewer.contributionsCollection.contributionCalendar.weeks[0].startDate}
+                    startDate={startDate}
                     endDate={new Date()}
-                    values={data.viewer.contributionsCollection.contributionCalendar.weeks.reduce((acc, current) => {
-                        current.contributionDays.map(day => acc.push({ date: day.date, count: day.contributionCount}))
-                        return acc;
-                        }, [])}
+                    values={Days}
                     classForValue={value => {
                         if (!value) {
                             return 'color-empty';

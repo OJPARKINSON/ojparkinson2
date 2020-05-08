@@ -86,8 +86,14 @@ body {
 
 /* Github calander */
     .react-calendar-heatmap text {
-        font-size: .5vw;
-        fill: #aaa;
+        font-size: .4vw;
+        fill: #979797;;
+    }
+
+    .react-calendar-heatmap text {
+        width: 90%;
+        margin: 0 auto;
+        display: block;
     }
     
     .react-calendar-heatmap .react-calendar-heatmap-small-text {
