@@ -34,11 +34,12 @@ body {
         grid-column-start: 1;
         grid-row-start: 2;
         list-style: none;
-        margin: 11vw 0 5vw 0;
+        margin: 10vw 0 5vw 0;
+        
     }
 
     li {
-        margin: 2vw 0;
+        margin: 3vw 0;
     }
 
     li a {
@@ -52,7 +53,7 @@ body {
 
     .section {
         width: 75%;
-        margin: 0 auto;
+        margin: 4vw auto;
         position: relative;
     }
     .label {
@@ -68,6 +69,13 @@ body {
         margin: 0 auto;
     }
 
+/* Spacer */
+    .Spacer {
+        width: 100%;
+        background-color: #7B7E7D;
+        height: .1vw;
+    }
+
 /* Portfolio */
     .portfolioImage {
         display: block;
@@ -75,3 +83,41 @@ body {
         height: 100%;
         margin: 0 auto;
     }
+
+/* Github calander */
+    .react-calendar-heatmap text {
+        font-size: .5vw;
+        fill: #aaa;
+    }
+    
+    .react-calendar-heatmap .react-calendar-heatmap-small-text {
+        font-size: 2vw;
+    }
+    
+    .react-calendar-heatmap rect:hover {
+        stroke: #555;
+        stroke-width: 1px;
+    }
+  
+    .react-calendar-heatmap .color-empty {
+        fill: #eeeeee;
+    }
+
+    .react-calendar-heatmap .color-filled {
+        fill: #8cc665;
+    }
+    .react-calendar-heatmap .color-github-0 {
+        fill: #eeeeee;
+      }
+      .react-calendar-heatmap .color-github-1 {
+        fill: #d6e685;
+      }
+      .react-calendar-heatmap .color-github-2 {
+        fill: #8cc665;
+      }
+      .react-calendar-heatmap .color-github-3 {
+        fill: #44a340;
+      }
+      .react-calendar-heatmap .color-github-4 {
+        fill: #1e6823;
+      }
