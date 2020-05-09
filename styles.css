@@ -29,7 +29,7 @@ body {
         filter: drop-shadow(0 0 16px rgb(116, 45, 145));
     }
 
-    ul {
+    header ul {
         padding: 0;
         grid-column-start: 1;
         grid-row-start: 2;
@@ -38,11 +38,11 @@ body {
         
     }
 
-    li {
+    header ul li {
         margin: 3vw 0;
     }
 
-    li a {
+    header ul li a {
         font-family: 'IBM Plex Sans', sans-serif;
         font-size: 1.3vw;
         letter-spacing: .25vw;
@@ -70,13 +70,29 @@ body {
     }
 
 /* Spacer */
+
     .Spacer {
         width: 100%;
         background-color: #7B7E7D;
         height: .1vw;
     }
 
+/* About */
+
+    .About {
+        text-align: center;
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+        color: #eee;
+        font-size: 1vw;
+        letter-spacing: .1vw;
+        font-weight: 300 ;
+        font-family: 'IBM Plex Sans', sans-serif;
+    }
+
 /* Portfolio */
+
     .portfolioImage {
         display: block;
         width: 90%;
@@ -85,6 +101,11 @@ body {
     }
 
 /* Github calander */
+    .react-calendar-heatmap {
+        width: 90%;
+        display: block;
+        margin: 0 auto;
+    }
     .react-calendar-heatmap text {
         font-size: .4vw;
         fill: #979797;;
@@ -108,22 +129,44 @@ body {
     .react-calendar-heatmap .color-empty {
         fill: #eeeeee;
     }
-
     .react-calendar-heatmap .color-filled {
         fill: #8cc665;
     }
     .react-calendar-heatmap .color-github-0 {
         fill: #eeeeee;
-      }
-      .react-calendar-heatmap .color-github-1 {
+    }
+    .react-calendar-heatmap .color-github-1 {
         fill: #d6e685;
-      }
-      .react-calendar-heatmap .color-github-2 {
+    }
+    .react-calendar-heatmap .color-github-2 {
         fill: #8cc665;
-      }
-      .react-calendar-heatmap .color-github-3 {
+    }
+    .react-calendar-heatmap .color-github-3 {
         fill: #44a340;
-      }
-      .react-calendar-heatmap .color-github-4 {
+    }
+    .react-calendar-heatmap .color-github-4 {
         fill: #1e6823;
-      }
+    }
+/* Contact */
+
+    .contactContainer {
+        display: flex;
+        width: 70%;
+        margin: 0 auto;
+        justify-content: space-evenly;
+        list-style: none;
+    }
+    .contactItem {
+        border: solid beige .1px;
+        padding: 0 2vw 0 .5vw;
+        border-radius: 5%;
+    }
+    .contactItem a {
+        font-family: 'IBM Plex Sans', sans-serif;
+        color: white;
+        text-decoration: none;
+        letter-spacing: .15vw;
+    }
+    .contactItem a p {
+        font-size: .8vw;
+    }
