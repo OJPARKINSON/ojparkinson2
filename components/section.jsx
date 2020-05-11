@@ -1,12 +1,10 @@
 import React from 'react';
 
-const Section = ({ label, children }) => {
-	return (
-		<div className="section">
-            <label className="label">{label}</label>
-			{children}
-		</div>
-	)
-};
+const Section = ({ label, children }) => (
+  <div className="section">
+    <div className="label">{label}</div>
+    {children}
+  </div>
+);
 
-export default Section
+export default Section;

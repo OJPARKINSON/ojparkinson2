@@ -1,6 +1,5 @@
 module.exports = {
-    env: {
-      KEY: process.env.KEY,
-    },
-  }
-  
+  env: {
+    KEY: process.env.KEY,
+  },
+};

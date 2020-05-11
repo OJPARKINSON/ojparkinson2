@@ -31,42 +31,40 @@ const calendarQuery = gql`
 `;
 
 
-
 const Calendar = () => {
-    const { loading, error, data } = useQuery(calendarQuery);
+  const { loading, error, data } = useQuery(calendarQuery);
 
-    if (loading) { 
-        return <h2>Loading bro</h2>
-    } else if (error) { 
-        return <h2>Error loading the github calander</h2>
-    } else {
-        const { startDate } = data?.viewer?.contributionsCollection?.contributionCalendar?.weeks[0]
-        const Days = data?.viewer?.contributionsCollection?.contributionCalendar?.weeks?.reduce((acc, current) => {
-            current.contributionDays.map(day => acc.push({ date: day.date, count: day.contributionCount}))
-            return acc;
-            }, []);
-        return (
-            <>
-                <CalendarHeatmap
-                    startDate={startDate}
-                    endDate={new Date()}
-                    values={Days}
-                    classForValue={value => {
-                        if (!value) {
-                            return 'color-empty';
-                        } else if (value.count > 4) {
-                            return `color-github-4`
-                        } else {
-                            return `color-github-${value.count}`;
-                        }
-                    }}
-                    tooltipDataAttrs={value => (value.date) ? ({'data-tip': `${value.date.slice(0,10)} has count: ${value.count}`, 'data-background-color': 'black'}) : null}
-                    showWeekdayLabels={true}
-                    />
-                <ReactTooltip />
-            </>
-        )
-    }
+  if (loading) {
+    return <h2>Loading bro</h2>;
+  } if (error) {
+    console.log(error);
+    return <h2>Error loading the github calander</h2>;
+  }
+  const { weeks } = data.viewer.contributionsCollection.contributionCalendar;
+  const Days = weeks.reduce((acc, { contributionDays }) => {
+    contributionDays.map((day) => acc.push({ date: day.date, count: day.contributionCount }));
+    return acc;
+  }, []);
+  return (
+    <>
+      <CalendarHeatmap
+        startDate={weeks[0].startDate}
+        endDate={new Date()}
+        values={Days}
+        classForValue={(value) => {
+          if (!value) {
+            return 'color-empty';
+          } if (value.count > 4) {
+            return 'color-github-4';
+          }
+          return `color-github-${value.count}`;
+        }}
+        tooltipDataAttrs={(value) => ((value.date) ? ({ 'data-tip': `${value.date.slice(0, 10)} has count: ${value.count}`, 'data-background-color': 'black' }) : null)}
+        showWeekdayLabels
+      />
+      <ReactTooltip />
+    </>
+  );
 };
 
 export default Calendar;
