@@ -93,14 +93,29 @@ body {
     }
 
 /* Portfolio */
-
+    .portfolioContainer {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
     .portfolioImage {
         display: block;
         width: 90%;
         height: 100%;
         margin: 0 auto;
     }
-
+    .githubLink {
+        padding: .8vw 2vw;
+        font-size: 1vw;
+        margin: 0 auto;
+        color: white;
+        text-decoration: none;
+        background: url(./public/neon_clouds.jpg) no-repeat center;
+        border-radius: 1vw;
+        box-shadow: .3vw .3vw .3vw #181818;
+        margin-top: 2vw;
+        letter-spacing: .125vw;
+        font-weight: 400;
+    }
 /* Github calander */
     .react-calendar-heatmap {
         width: 90%;

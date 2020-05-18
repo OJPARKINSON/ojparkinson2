@@ -8,24 +8,16 @@ import { gql } from 'apollo-boost';
 const calendarQuery = gql`
     {
         viewer {
-        contributionsCollection {
-            contributionCalendar {
-            totalContributions
-            months {
-                name
-                firstDay
-            }
-            weeks {
-                firstDay
-                contributionDays {
-                color
-                contributionCount
-                date
-                weekday
+            contributionsCollection {
+                contributionCalendar {
+                weeks {
+                    contributionDays {
+                        contributionCount
+                        date
+                        }
+                    }
                 }
             }
-            }
-        }
         }
     }
 `;
@@ -45,6 +37,7 @@ const Calendar = () => {
     contributionDays.map((day) => acc.push({ date: day.date, count: day.contributionCount }));
     return acc;
   }, []);
+
   return (
     <>
       <CalendarHeatmap

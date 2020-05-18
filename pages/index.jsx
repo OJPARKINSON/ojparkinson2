@@ -9,6 +9,7 @@ import Calendar from '../components/calender';
 import Section from '../components/section';
 import About from '../components/about';
 import Contact from '../components/contact';
+import Portfolio from '../components/portfolio';
 
 const client = new ApolloClient({
   uri: 'https://api.github.com/graphql',
@@ -40,9 +41,7 @@ const Home = () => (
     <div className="Spacer" />
 
     <Section label="Portfolio" border={false}>
-      <a href="https://www.harrisontateph.co.uk/" target="_blank" rel="noopener noreferrer">
-        <img className="portfolioImage" src="/Bitmap.png" alt="Portfolio website" />
-      </a>
+      <Portfolio />
     </Section>
 
     <div className="Spacer" />
