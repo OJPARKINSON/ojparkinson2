@@ -1,8 +1,8 @@
-import Head from 'next/head';
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import fetch from 'node-fetch';
 import { ApolloProvider } from '@apollo/react-hooks';
+import '../components/layout.css';
 
 import Header from '../components/header';
 import Calendar from '../components/calender';
@@ -16,7 +16,7 @@ const client = new ApolloClient({
   request: (operation) => {
     operation.setContext({
       headers: {
-        Authorization: `Bearer ${process.env.KEY}`,
+        Authorization: `Bearer ${process.env.GATSBY_KEY}`,
       },
     });
   },
@@ -25,13 +25,6 @@ const client = new ApolloClient({
 
 const Home = () => (
   <div className="container">
-    <Head>
-      <title>Oliver Parkinson</title>
-      <link rel="icon" href="/favicon.ico" />
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400&display=swap" rel="stylesheet" />
-    </Head>
-
     <Header />
 
     <Section label="About" border={false}>

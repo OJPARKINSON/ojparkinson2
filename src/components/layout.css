@@ -20,7 +20,7 @@ body {
     h1 {
         letter-spacing: .2vw;
         font-size: 4vw;
-        background: url(./public/neon_clouds.jpg) no-repeat;
+        background: url(../images/neon_clouds.jpg) no-repeat;
         font-weight: 700;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -109,7 +109,7 @@ body {
         margin: 0 auto;
         color: white;
         text-decoration: none;
-        background: url(./public/neon_clouds.jpg) no-repeat center;
+        background: url(../images/neon_clouds.jpg) no-repeat center;
         border-radius: 1vw;
         box-shadow: .3vw .3vw .3vw #181818;
         margin-top: 2vw;

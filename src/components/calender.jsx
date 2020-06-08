@@ -4,36 +4,34 @@ import ReactTooltip from 'react-tooltip';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
-
 const calendarQuery = gql`
     {
-        viewer {
-            contributionsCollection {
-                contributionCalendar {
-                weeks {
-                    contributionDays {
-                        contributionCount
-                        date
-                        }
-                    }
-                }
-            }
-        }
+      viewer {
+          contributionsCollection {
+              contributionCalendar {
+              weeks {
+                  contributionDays {
+                      contributionCount
+                      date
+                      }
+                  }
+              }
+          }
+      }
     }
 `;
-
 
 const Calendar = () => {
   const { loading, error, data } = useQuery(calendarQuery);
 
-  if (loading) {
-    return <h2>Loading bro</h2>;
-  } if (error) {
-    console.log(error);
-    return <h2>Error loading the github calander</h2>;
-  }
+  if (loading) return <h2>Loading bro</h2>
+  if (error) {console.log(error); return <h2>Error loading the github calander</h2>}
+  if (data) return <CalendarBody data={data} />
+};
+
+const CalendarBody = ({ data }) => {
   const { weeks } = data.viewer.contributionsCollection.contributionCalendar;
-  const Days = weeks.reduce((acc, { contributionDays }) => {
+  const days = weeks.reduce((acc, { contributionDays }) => {
     contributionDays.map((day) => acc.push({ date: day.date, count: day.contributionCount }));
     return acc;
   }, []);
@@ -43,7 +41,7 @@ const Calendar = () => {
       <CalendarHeatmap
         startDate={weeks[0].startDate}
         endDate={new Date()}
-        values={Days}
+        values={days}
         classForValue={(value) => {
           if (!value) {
             return 'color-empty';
@@ -58,6 +56,6 @@ const Calendar = () => {
       <ReactTooltip />
     </>
   );
-};
+}
 
 export default Calendar;
