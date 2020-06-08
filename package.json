@@ -21,7 +21,8 @@
     "react-calendar-heatmap": "^1.8.1",
     "react-dom": "^16.12.0",
     "react-helmet": "^6.0.0",
-    "react-tooltip": "^4.2.6"
+    "react-tooltip": "^4.2.6",
+    "snyk": "^1.336.0"
   },
   "devDependencies": {
     "prettier": "2.0.5"
@@ -37,7 +38,9 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -45,5 +48,6 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
-  }
+  },
+  "snyk": true
 }
