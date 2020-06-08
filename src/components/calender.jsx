@@ -5,29 +5,34 @@ import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
 const calendarQuery = gql`
-    {
-      viewer {
-          contributionsCollection {
-              contributionCalendar {
-              weeks {
-                  contributionDays {
-                      contributionCount
-                      date
-                      }
-                  }
-              }
-          }
-      }
+  {
+    viewer {
+        contributionsCollection {
+            contributionCalendar {
+            weeks {
+                contributionDays {
+                    contributionCount
+                    date
+                    }
+                }
+            }
+        }
     }
+  }
 `;
 
 const Calendar = () => {
   const { loading, error, data } = useQuery(calendarQuery);
 
-  if (loading) return <h2>Loading bro</h2>
-  if (error) {console.log(error); return <h2>Error loading the github calander</h2>}
+  if (loading) return <h2>Loading</h2>
+  if (error) return <Error error={error} />
   if (data) return <CalendarBody data={data} />
 };
+
+const Error = ({ error }) => {
+  console.log(error); 
+  return <h2>Error loading the github calander</h2>
+}
 
 const CalendarBody = ({ data }) => {
   const { weeks } = data.viewer.contributionsCollection.contributionCalendar;
@@ -35,7 +40,6 @@ const CalendarBody = ({ data }) => {
     contributionDays.map((day) => acc.push({ date: day.date, count: day.contributionCount }));
     return acc;
   }, []);
-
   return (
     <>
       <CalendarHeatmap
@@ -43,11 +47,8 @@ const CalendarBody = ({ data }) => {
         endDate={new Date()}
         values={days}
         classForValue={(value) => {
-          if (!value) {
-            return 'color-empty';
-          } if (value.count > 4) {
-            return 'color-github-4';
-          }
+          if (!value) return 'color-empty';
+          if (value.count > 4) return 'color-github-4';
           return `color-github-${value.count}`;
         }}
         tooltipDataAttrs={(value) => ((value.date) ? ({ 'data-tip': `${value.date.slice(0, 10)} has count: ${value.count}`, 'data-background-color': 'black' }) : null)}
@@ -57,5 +58,7 @@ const CalendarBody = ({ data }) => {
     </>
   );
 }
+
+
 
 export default Calendar;
