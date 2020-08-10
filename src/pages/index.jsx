@@ -26,33 +26,24 @@ const client = new ApolloClient({
 const Home = () => (
   <div className="container">
     <Header />
-
     <Section label="About" border={false}>
       <About />
     </Section>
-
     <div className="Spacer" />
-
     <Section label="Portfolio" border={false}>
       <Portfolio />
     </Section>
-
     <div className="Spacer" />
-
     <Section label="Calander" border={false}>
       <ApolloProvider client={client}>
         <Calendar />
       </ApolloProvider>
     </Section>
-
     <div className="Spacer" />
-
     <Section label="Contact" border={false}>
       <Contact />
     </Section>
-
   </div>
 );
-
 
 export default Home;
